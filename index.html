@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS CARD</title>
+    <style>
+        
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    transition: all 0.3 linear;
+}
+.con{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(76, 147, 123);
+    background-image: linear-gradient(90deg,#74ebd5 0%, #9face6 100%);
+}
+
+.box{
+    width: 400px;
+    height: 455px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0, 3px, 5px rgba(1,2,4,3);
+    overflow: hidden;
+    position: relative;
+    z-index:0 ;
+
+}
+.box h3{
+    margin-top: 100px;
+    font-size: 35px;
+    padding: 20px 0;
+    color: #392121;
+
+}
+.box p{
+    margin-top: 20px;
+    font-size: 15px;
+    color: #5a0274;
+    
+}
+.gf{
+width: 140px;
+height: 40px;
+border: none;
+outline: none;
+font-size: 17px;
+cursor: pointer;
+border-radius: 40px;
+margin-top: 30px;
+}
+.gf:hover{
+    border: 2px solid rgb(192, 19, 198);
+    letter-spacing: 2px;
+    opacity: 8;
+}
+.box::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+}
+.box::after{
+
+width: 100%;
+height: 100%;
+background-color: #61cffb;
+background-image: linear-gradient(45deg, #FBDA61 0%, #ef2dd9 100% );
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+z-index: -2;
+clip-path: circle(20% at 90% 10%);
+transition: .2s;
+border-radius: 10px;
+
+
+}
+.box .count{
+position: absolute;
+top: 15px;
+right: 30px;
+font-size: 50px;
+font-weight: bolder;
+    color: #fff;}
+    .box:nth-child(2):after{
+    background-color: #0093e9;
+    background-image: linear-gradient(0deg, #08AEEA 0%, #80D0c7 100%);
+}
+.box:nth-child(3):after{
+    background-color: #08AEEA;
+    background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+}
+.box:hover::after{
+    clip-path: circle(100%);
+}
+.box:hover h3{
+    color: #fdfdfd;
+}
+.box:hover p{
+    color: rgb(15, 232, 214);
+
+}
+
+svg{
+    padding: 10px 0;
+    display: inline;
+    
+    width: 20px;
+    height: 50px;
+}
+    </style>
+</head>
+<body>
+    <div class="con">
+<div class="box">
+<h3>
+    DEVELOPOR
+</h3>
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iste dolor mollitia corporis tenetur rerum qui sed hic ratione molestias.
+
+</p>
+<a href="#"><button class="gf">Read More</button></a>
+<span class="count">1*</span>
+<div class="sk">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg> </div>
+</div>
+</div>
+
+
+</body>
+</html>
